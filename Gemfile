@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails',        '5.0.0.1'
 gem 'bcrypt',       '3.1.11'
-gem 'faker',        '1.6.6'
+#gem 'faker',        '1.6.6'
+gem 'faker'
 gem 'carrierwave',             '0.11.2'
 gem 'mini_magick',             '4.5.1'
 gem 'fog',                     '1.38.0'
@@ -18,6 +19,8 @@ gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.4.1'
 
 group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
   gem 'sqlite3', '1.3.11'
   gem 'byebug',  '9.0.0', platform: :mri
 end
@@ -30,6 +33,11 @@ group :development do
 end
 
 group :test do
+#  gem 'faker'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'selenium-webdriver'
   gem 'rails-controller-testing', '0.1.1'
   gem 'minitest-reporters',       '1.1.9'
   gem 'guard',                    '2.13.0'
