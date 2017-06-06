@@ -15,6 +15,8 @@ ja:
     views:
       sessions:
         new:
+          title: "ログイン"
+          login: "ログイン"
           signup: "ユーザ登録"
           new: "新規ですか？"
       microposts:
