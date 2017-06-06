@@ -5,9 +5,12 @@
   </small>
   <nav>
     <ul>
-      <li><%= link_to "About",   about_path %></li>
-      <li><%= link_to "Contact", contact_path %></li>
-      <li><a href="http://news.railstutorial.org/">News</a></li>
+      <% about = t 'app.views.layouts._footer.about' %>
+      <% contact = t 'app.views.layouts._footer.contact' %>
+      <% news = t 'app.views.layouts._footer.news' %>
+      <li><%= link_to about,   about_path %></li>
+      <li><%= link_to contact, contact_path %></li>
+      <li><a href="http://news.railstutorial.org/"><%= news %></a></li>
     </ul>
   </nav>
 </footer>

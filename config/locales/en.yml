@@ -21,23 +21,72 @@
 
 en:
   app:
-    errors:
-      login:
-        invalid_email_password: "Invalid email/password combination"
-    
-    message:
-      login:
-        signup: "Sign up now!"
-        new: "New user?"
-      micropost:
-        are_you_sure: "You sure?"
-        ago: "ago"
+    controllers:
+      application_controller:
+        dangerflash: "Please log in."
+      sessions_controller:
+        dangerflash: "Invalid email/password combination"
+      users_controller:
+        welcome: "Welcome to the Sample App!"
+        update: "Profile updated"
+        userdelete: "User deleted"
+      micropost_controller:
+        create: "Micropost created!"
+        delete: "Micropost deleted"
     views:
+      sessions:
+        new:
+          signup: "Sign up now!"
+          new: "New user?"
+      microposts:
+        _micropost:
+          posted: "Posted"
+          are_you_sure: "You sure?"
+          ago: "ago"
+      layouts:
+        _footer:
+          about: "About"
+          contact: "Contact"
+          news: "News"
+        _header:
+          title: "sample app"
+          home: "Home"
+          help: "Help"
+          users: "Users"
+          account: "Account"
+          profile: "Profile"
+          settings: "Settings"
+          logout: "Log out"
+          login: "Log in"
       static_pages:
         _logged_in:
           MicropostFeed: "Micropost Feed"
         about:
           title: "About"
+        help:
+          title: "Help"
+        _not_logged_in:
+          title: 'Welcome to the Sample App'
+          signupnow: "Sign up now!"
+          me1: "This is the home page for the"
+          me2: 'Ruby on Rails Tutorial'
+          me3: "sample application."
+        contact:
+          title: "Contact"
+          me1: "Contact the Ruby on Rails Tutorial about the sample app at the"
+          me2: "contact page."
+      users:
+        _follow:
+          follow: "Follow"
+        _unfollow:
+          unfollow: "Unfollow"
+        edit:
+          title: "Update your profile"
+          change: "change"
+        new:
+          title: "Sign up"
+        index:
+          title: "All users"
       shared:
         _micropost_form:
           placeholder: "Compose new micropost..."

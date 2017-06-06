@@ -1,22 +1,71 @@
 ja:
   app:
-    errors:
-      login:
-        invalid_email_password: "メールアドレスとパスワードの組み合わせが正しくありません"
-        need_login: "ログインが必要です"
-          
-            
-    message:
-      login:
-        signup: "ユーザ登録"
-        new: "新規ですか？"
-      micropost:
-        are_you_sure: "本当に実行しますか？"
-        ago: "前"
+    controllers:
+      application_controller:
+        dangerflash: "ログインが必要です"
+      sessions_controller:
+        dangerflash: "メールアドレスとパスワードの組み合わせが正しくありません"
+      users_controller:
+        welcome: "サンプルAPPへようこそ！"
+        update: "プロファイルを更新しました"
+        userdelete: "ユーザを削除しました"
+      micropost_controller:
+        create: "Micropostを作成しました"
+        delete: "Micropostを削除しました"
     views:
+      sessions:
+        new:
+          signup: "ユーザ登録"
+          new: "新規ですか？"
+      microposts:
+        _micropost:
+          posted: "投稿"
+          are_you_sure: "本当に実行しますか？"
+          ago: "前"
+      layouts:
+        _footer:
+          about: "このサイトについて"
+          contact: "コンタクト"
+          news: "新着情報"
+        _header:
+          title: "サンプルapp"
+          home: "ホーム"
+          help: "ヘルプ"
+          users: "ユーザ一覧"
+          account: "アカウント"
+          profile: "プロファイル"
+          settings: "設定"
+          logout: "ログアウト"
+          login: "ログイン"
       static_pages:
         _logged_in:
           MicropostFeed: "Micropost 一覧"
+        about:
+          title: "このサイトについて"
+        help:
+          title: "ヘルプ"
+        _not_logged_in:
+          title: "サンプルappへようこそ"
+          signupnow: "今すぐ登録する"
+          me1: "このページは"
+          me2: "Ruby on Rails Tutorial"
+          me3: "のサンプルアプリページです。"
+        contact:
+          title: "コンタクト"
+          me1: "サンプルページについてはRuby on Rails　チュートリアルを確認してください。"
+          me2: "チュートリアルに進む。"
+      users:
+        _follow:
+          follow: "フォローする"
+        _unfollow:
+          unfollow: "フォローをやめる"
+        edit:
+          title: "プロファイルをアップデート"
+          change: "変更"
+        new:
+          title: "ユーザ登録"
+        index:
+          title: "ユーザ一覧"
       shared:
         _micropost_form:
           placeholder: "つぶやこう..."
@@ -28,7 +77,9 @@ ja:
         _user_info:
           profile: "プロファイルを確認する"
         
-        
+  
+  
+  #インポート
   activerecord:
     errors:
       messages:
