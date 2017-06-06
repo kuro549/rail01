@@ -6,7 +6,15 @@ FactoryGirl.define do
     password_confirmation "testes"
   end
   
-  factory :ramdom_user do
+  factory :admin_user, class: User do
+    name "adminfac.name"
+    email "adminfac@example.com"
+    password "testes"
+    password_confirmation "testes"
+    #admin true
+  end
+  
+  factory :ramdom_user, class: User do
     name { Faker::Name.name }
     email { Faker::Internet.email }
     password 'password'
