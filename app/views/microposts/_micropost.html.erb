@@ -6,10 +6,11 @@
     <%= image_tag micropost.picture.url if micropost.picture? %>
   </span>
   <span class="timestamp">
-    Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+    Posted <%= time_ago_in_words(micropost.created_at)%> <%= t 'app.message.micropost.ago' %>.
+    <% trans = t 'app.message.micropost.are_you_sure'%>
     <% if current_user?(micropost.user) %>
       <%= link_to "delete", micropost, method: :delete,
-                                       data: { confirm: "You sure?" } %>
+                                       data: { confirm: trans  } %>
     <% end %>
   </span>
 </li>
