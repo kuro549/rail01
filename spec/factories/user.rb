@@ -11,7 +11,7 @@ FactoryGirl.define do
     email "adminfac@example.com"
     password "testes"
     password_confirmation "testes"
-    #admin true
+    admin true
   end
   
   factory :ramdom_user, class: User do
