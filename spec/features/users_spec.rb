@@ -29,7 +29,6 @@ feature 'General user' do
       assert_match micropost.content, response.body
     end
   end
-  
 end
 
 feature 'Admin User' do
